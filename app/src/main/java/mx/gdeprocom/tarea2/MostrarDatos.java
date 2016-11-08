@@ -20,7 +20,7 @@ public class MostrarDatos extends AppCompatActivity {
 
         Bundle parametros = getIntent().getExtras();
         String nombre = parametros.getString(getResources().getString(R.string.nombre));
-        String fecha = parametros.getString(getResources().getString(R.string.fecha_nacimiento));
+        String fecha = parametros.getString(getResources().getString(R.string.fecha_seleccionada));
         String telefono = parametros.getString(getResources().getString(R.string.telefono));
         String email = parametros.getString(getResources().getString(R.string.email));
         String desripcion = parametros.getString(getResources().getString(R.string.desripcion));
