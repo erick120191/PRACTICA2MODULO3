@@ -15,7 +15,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="@dimen/top"
-        android:onClick="llamar"
         >
             <TextView
                 android:id="@+id/tvNombre"
@@ -23,7 +22,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/nombre" />
             <TextView
-                android:id="@+id/detnombre"
+                android:id="@+id/tvDNombre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
     </LinearLayout>
@@ -32,15 +31,30 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="@dimen/top"
-        android:onClick="llamar"
         >
         <TextView
-            android:id="@+id/tvtelefono"
+            android:id="@+id/tvFecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fecha_nacimiento" />
+        <TextView
+            android:id="@+id/tvDFecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/top"
+        >
+        <TextView
+            android:id="@+id/tvTelefono"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/telefono" />
         <TextView
-            android:id="@+id/dettelefono"
+            android:id="@+id/tvDTelefono"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>
@@ -49,15 +63,14 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="@dimen/top"
-        android:onClick="llamar"
         >
         <TextView
-            android:id="@+id/tvemail"
+            android:id="@+id/tvEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/email" />
         <TextView
-            android:id="@+id/detemail"
+            android:id="@+id/tvDEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>
@@ -66,20 +79,19 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="@dimen/top"
-        android:onClick="llamar"
         >
         <TextView
-            android:id="@+id/tvdescripcion"
+            android:id="@+id/tvDescripcion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/desripcion" />
         <TextView
-            android:id="@+id/detdescripcion"
+            android:id="@+id/tvDDescripcion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>
     <Button
-        android:id="@+id/btnMiBoton"
+        android:id="@+id/btnEditar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/boton_editar"

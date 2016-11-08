@@ -33,10 +33,10 @@ public class MainActivity extends AppCompatActivity {
         day = calendar.get(Calendar.DAY_OF_MONTH);
         showDate(year, month+1, day);
 
-        final AppCompatEditText nombre = (AppCompatEditText) findViewById(R.id.etnombre) ;
-        final AppCompatEditText telefono = (AppCompatEditText) findViewById(R.id.ettelefono) ;
+        final AppCompatEditText nombre = (AppCompatEditText) findViewById(R.id.etnombre);
+        final AppCompatEditText telefono = (AppCompatEditText) findViewById(R.id.ettelefono);
         final AppCompatEditText email = (AppCompatEditText) findViewById(R.id.etemail);
-        final AppCompatEditText descripcion = (AppCompatEditText) findViewById(R.id.etdescripcion) ;
+        final AppCompatEditText descripcion = (AppCompatEditText) findViewById(R.id.etdescripcion);
         final TextView fecha=(TextView) findViewById(R.id.etfechaselec);
         //final AppCompatEditText fechaNacimiento = (AppCompatEditText) findViewById(R.id.etfechaselec) ;
         Button btnSiguiente = (Button) findViewById(R.id.btnSiguiente);
@@ -53,9 +53,9 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, MostrarDatos.class);
                 intent.putExtra(getResources().getString(R.string.nombre), nombreCompleto);
                 intent.putExtra(getResources().getString(R.string.email),emailContacto);
-                intent.putExtra(getResources().getString(R.string.nombre),telefonoContacto);
+                intent.putExtra(getResources().getString(R.string.telefono),telefonoContacto);
                 intent.putExtra(getResources().getString(R.string.desripcion),descripcionContac);
-                intent.putExtra(getResources().getString(R.string.nombre),fechaNac);
+                intent.putExtra(getResources().getString(R.string.fecha_seleccionada),fechaNac);
                 startActivity(intent);
             }
         });
