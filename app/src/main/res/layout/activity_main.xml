@@ -11,6 +11,8 @@
     android:orientation="vertical"
     tools:context="mx.gdeprocom.tarea2.MainActivity">
 
+
+
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -21,8 +23,32 @@
             android:layout_height="wrap_content"
             android:hint="@string/nombre"
             />
-
     </android.support.design.widget.TextInputLayout>
+
+
+
+
+    <TextView
+        android:id="@+id/tipfecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="66dp"
+        android:text="@string/fecha_nacimiento"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    <TextView
+        android:id="@+id/etfechaselec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="@string/fecha_seleccionada"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:onClick="setDate"/>
+
+
+
+
+
+
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -47,23 +73,6 @@
             />
 
     </android.support.design.widget.TextInputLayout>
-    <TextView
-        android:id="@+id/tipfecha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="66dp"
-        android:text="@string/fecha_nacimiento"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
-        android:id="@+id/etfechaselec"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:text="@string/fecha_seleccionada"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:onClick="setDate"/>
-
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">

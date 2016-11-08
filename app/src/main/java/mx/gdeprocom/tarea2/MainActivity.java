@@ -6,6 +6,7 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.AppCompatEditText;
 import android.view.Menu;
 import android.view.View;
 
@@ -32,8 +33,32 @@ public class MainActivity extends AppCompatActivity {
         day = calendar.get(Calendar.DAY_OF_MONTH);
         showDate(year, month+1, day);
 
+        final AppCompatEditText nombre = (AppCompatEditText) findViewById(R.id.etnombre) ;
+        final AppCompatEditText telefono = (AppCompatEditText) findViewById(R.id.ettelefono) ;
+        final AppCompatEditText email = (AppCompatEditText) findViewById(R.id.etemail);
+        final AppCompatEditText descripcion = (AppCompatEditText) findViewById(R.id.etdescripcion) ;
+        final TextView fecha=(TextView) findViewById(R.id.etfechaselec);
+        //final AppCompatEditText fechaNacimiento = (AppCompatEditText) findViewById(R.id.etfechaselec) ;
+        Button btnSiguiente = (Button) findViewById(R.id.btnSiguiente);
 
+        btnSiguiente.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String nombreCompleto = nombre.getText().toString();
+                String emailContacto = email.getText().toString();
+                String telefonoContacto = telefono.getText().toString();
+                String descripcionContac = descripcion.getText().toString();
+                String fechaNac = fecha.getText().toString();
 
+                Intent intent = new Intent(MainActivity.this, MostrarDatos.class);
+                intent.putExtra(getResources().getString(R.string.nombre), nombreCompleto);
+                intent.putExtra(getResources().getString(R.string.email),emailContacto);
+                intent.putExtra(getResources().getString(R.string.nombre),telefonoContacto);
+                intent.putExtra(getResources().getString(R.string.desripcion),descripcionContac);
+                intent.putExtra(getResources().getString(R.string.nombre),fechaNac);
+                startActivity(intent);
+            }
+        });
     }
     @SuppressWarnings("deprecation")
     public void setDate(View view) {
@@ -69,15 +94,5 @@ public class MainActivity extends AppCompatActivity {
     private void showDate(int year, int month, int day) {
         dateView.setText(new StringBuilder().append(day).append("/")
                 .append(month).append("/").append(year));
-    }
-
-    public void siguiente()
-    {
-        Intent intent=new Intent(MainActivity.this,MostrarDatos.class);
-        intent.putExtra(getResources().getString(R.string.nombre),findViewById(R.id.etnombre).toString());
-        intent.putExtra(getResources().getString(R.string.telefono),findViewById(R.id.ettelefono).toString());
-        intent.putExtra(getResources().getString(R.string.email),findViewById(R.id.etemail).toString());
-        intent.putExtra(getResources().getString(R.string.desripcion),findViewById(R.id.etdescripcion).toString());
-        startActivity(intent);
     }
 }
